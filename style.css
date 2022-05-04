@@ -1,0 +1,83 @@
+:root {
+    --color-lightcean: hsl(193, 38%, 86%);
+    --color-neongreen: hsl(150, 100%, 66%);
+    --color-grayblue: hsl(217, 19%, 38%);
+    --color-graydark: hsl(217, 19%, 24%);
+    --color-darkblue: hsl(218, 23%, 16%);
+    --font: 'Manrope', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-weight: 800;
+    background-color: var(--color-darkblue);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px;
+    background-color: var(--color-grayblue);
+    height: 400px;
+    width: 400px;
+    border-radius: 12px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.advice {
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-neongreen);
+    letter-spacing: 2px;
+}
+
+button {
+    margin: auto auto 0 auto;
+    padding: 10px 20px;
+    background-color: var(--color-neongreen);
+    color: var(--color-graydark);
+    font-size: 14px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: ease 0.4s;
+    font-family: var(--font);
+    font-weight: 800;
+}
+button:hover {
+    background-color: var(--color-lightcean);
+    padding: 10px;
+    transition: ease 0.4s;
+}
+
+.note {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 50px 0 10px 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
