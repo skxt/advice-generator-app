@@ -1,4 +1,5 @@
 :root {
+    --color-white: hsl(0, 0%, 100%);
     --color-lightcean: hsl(193, 38%, 86%);
     --color-neongreen: hsl(150, 100%, 66%);
     --color-grayblue: hsl(217, 19%, 38%);
@@ -12,16 +13,18 @@ body {
     box-sizing: border-box;
     font-family: var(--font);
     font-weight: 800;
+    color: var(--color-white);
     background-color: var(--color-darkblue);
-    color: white;
+    margin: 0;
 }
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap;
     position: relative;
     width: 100%;
     min-height: 100vh;
+    align-items: center;
 }
 .box {
     display: flex;
@@ -29,9 +32,10 @@ main {
     margin: auto;
     padding: 50px;
     background-color: var(--color-grayblue);
-    height: 400px;
+    min-height: 200px;
     width: 400px;
     border-radius: 12px;
+    transition: ease 0.3s;
 }
 
 h2 {
@@ -51,7 +55,7 @@ button {
     margin: auto auto 0 auto;
     padding: 10px 20px;
     background-color: var(--color-neongreen);
-    color: var(--color-graydark);
+    color: var(--color-darkblue);
     font-size: 14px;
     border: 0;
     border-radius: 25px;
@@ -59,9 +63,11 @@ button {
     transition: ease 0.4s;
     font-family: var(--font);
     font-weight: 800;
+    text-transform: uppercase;
 }
 button:hover {
     background-color: var(--color-lightcean);
+    color: var(--color-grayblue);
     padding: 10px;
     transition: ease 0.4s;
 }
@@ -75,9 +81,14 @@ button:hover {
 .attribution {
     font-size: 11px;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
